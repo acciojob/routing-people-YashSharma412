@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import users from "./users";
 
-const UserList = () => {
+const UserList = ({userData}) => {
   return (
     <div>
       <h1>User List</h1>
       <ul>
         {
-            users.map((user) => (
+            userData.map((user) => (
                 <li>
-                    <Link to={`/users/${user.id}`}>{user.name}</Link>
+                    <Link key={user.id} to={`/users/${user.id}`}>{user.name}</Link>
                 </li>
             ))
         }      
