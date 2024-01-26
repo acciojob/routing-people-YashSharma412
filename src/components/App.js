@@ -1,28 +1,23 @@
-
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-// 
-import './../styles/App.css';
 import users from "./users";
-import Details from "./Details";
+//
+import "./../styles/App.css";
 import UserList from "./UserList";
-
+import UserDetails from "./UserDetails";
 const App = () => {
-  let [userData,setUserData] = useState(users)
   return (
     <div>
       <Routes>
-        <Route path="/" element={<UserList userData = {userData}/>} />
+        <Route path="/" element={<UserList />} />
         {
-          userData.map((user)=>(
-            <Route path={`users/${user.id}`} element={<Details userData={userData} key={user.id} userId = {user.id}/>} />
-
+          users.map((user, index) => (
+            <Route key={index} path={`/users/${user.id}`} element={<UserDetails userId={user.id} />} />
           ))
         }
       </Routes>
-      
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

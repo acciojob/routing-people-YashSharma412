@@ -1,21 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-const UserList = ({userData}) => {
+import users from "./users";
+import { Link } from "react-router-dom/dist";
+function UserList() {
   return (
-    <div>
+    <div className="list">
       <h1>User List</h1>
       <ul>
-        {
-            userData.map((user) => (
-                <li>
-                    <Link key={user.id} to={`/users/${user.id}`}>{user.name}</Link>
-                </li>
-            ))
-        }      
+        {users.map((user) => (
+          <li key={user.id}>
+            <Link to={`/users/${user.id}`}>{user.name}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
-};
+}
 
 export default UserList;

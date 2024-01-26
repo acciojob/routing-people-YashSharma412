@@ -26,6 +26,14 @@ const users = [{
     email: "Julianne.OConner@kory.org",
     phone: "493-170-9623 x156",
     website: "kale.biz",
-}]
+}, {
+    id: 5,
+    name: "Clementina DuBuque",
+    username: "Johnnie",
+    email: "Jacynthe.Kertzmann",
+    phone: "1-773-444-5555",
+    website: "wilderman.info",
+}
+]
 
 export default users;
