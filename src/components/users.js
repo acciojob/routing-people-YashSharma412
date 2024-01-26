@@ -31,7 +31,7 @@ const users = [{
     name: "Clementina DuBuque",
     username: "Moriah.Stanton",
     email: "Rey.Padberg@karina.biz",
-    phone: "1-773-444-5555",
+    phone: "024-648-3804",
     website: "wilderman.info",
 }
 ]
